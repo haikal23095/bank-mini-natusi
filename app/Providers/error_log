@@ -1,0 +1,20 @@
+[28-Feb-2026 21:32:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Support\Providers\EventServiceProvider' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Providers/EventServiceProvider.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Providers/EventServiceProvider.php on line 10
+[28-Feb-2026 23:05:54 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\ServiceProvider' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Providers/BroadcastServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Providers/BroadcastServiceProvider.php on line 8
+[02-Mar-2026 14:53:18 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Support\Providers\AuthServiceProvider' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Providers/AuthServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Providers/AuthServiceProvider.php on line 8
+[02-Mar-2026 23:01:01 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Support\Providers\RouteServiceProvider' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Providers/RouteServiceProvider.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Providers/RouteServiceProvider.php on line 11
+[03-Mar-2026 02:44:02 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\ServiceProvider' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Providers/AppServiceProvider.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Providers/AppServiceProvider.php on line 7

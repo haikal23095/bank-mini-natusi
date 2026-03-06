@@ -1,0 +1,60 @@
+[28-Feb-2026 18:11:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/mail.php on line 16
+[01-Mar-2026 03:46:08 UTC] PHP Fatal error:  Uncaught Error: Class 'Maatwebsite\Excel\Excel' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/excel.php:165
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/excel.php on line 165
+[01-Mar-2026 05:20:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/logging.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/logging.php on line 20
+[01-Mar-2026 05:50:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/broadcasting.php on line 18
+[01-Mar-2026 08:36:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/filesystems.php on line 16
+[01-Mar-2026 17:24:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/database.php on line 18
+[02-Mar-2026 11:03:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/app.php on line 16
+[02-Mar-2026 13:24:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/hashing.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/hashing.php on line 32
+[02-Mar-2026 14:01:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/hashing.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/hashing.php on line 32
+[02-Mar-2026 14:03:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/logging.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/logging.php on line 20
+[02-Mar-2026 14:52:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/database.php on line 18
+[02-Mar-2026 17:05:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/mail.php on line 16
+[02-Mar-2026 17:53:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/services.php on line 18
+[02-Mar-2026 19:24:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/mail.php on line 16
+[03-Mar-2026 00:26:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/config/queue.php on line 16

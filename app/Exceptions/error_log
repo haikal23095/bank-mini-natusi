@@ -1,0 +1,4 @@
+[02-Mar-2026 08:36:51 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Exceptions\Handler' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Exceptions/Handler.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Exceptions/Handler.php on line 7

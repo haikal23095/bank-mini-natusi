@@ -1,0 +1,24 @@
+[01-Mar-2026 08:37:38 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/database/migrations/2023_02_07_090107_create_siswa_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/database/migrations/2023_02_07_090107_create_siswa_table.php on line 7
+[01-Mar-2026 13:12:18 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/database/migrations/2023_02_09_070534_create_group_usaha_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/database/migrations/2023_02_09_070534_create_group_usaha_table.php on line 7
+[01-Mar-2026 16:12:53 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/database/migrations/2023_02_12_110752_create_transaksi_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/database/migrations/2023_02_12_110752_create_transaksi_table.php on line 7
+[02-Mar-2026 10:17:46 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/database/migrations/2019_08_19_000000_create_failed_jobs_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/database/migrations/2019_08_19_000000_create_failed_jobs_table.php on line 7
+[02-Mar-2026 14:53:49 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/database/migrations/2014_10_12_000000_create_users_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[02-Mar-2026 15:38:48 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Migrations\Migration' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/database/migrations/2023_02_08_101334_create_pengaturan_tabungan_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/database/migrations/2023_02_08_101334_create_pengaturan_tabungan_table.php on line 7

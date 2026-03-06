@@ -1,0 +1,4 @@
+[01-Mar-2026 17:43:47 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/bootstrap/app.php on line 14

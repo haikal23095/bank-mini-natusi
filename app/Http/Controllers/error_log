@@ -1,0 +1,64 @@
+[28-Feb-2026 20:43:41 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/SiswaController.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/SiswaController.php on line 13
+[28-Feb-2026 21:52:19 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/DebetController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/DebetController.php on line 10
+[28-Feb-2026 22:50:26 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/KreditController.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/KreditController.php on line 9
+[01-Mar-2026 03:01:16 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/CetakController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/CetakController.php on line 10
+[01-Mar-2026 13:16:15 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/DashboardController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/DashboardController.php on line 10
+[01-Mar-2026 19:15:01 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/AuthController.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/AuthController.php on line 9
+[01-Mar-2026 20:08:53 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Routing\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/Controller.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/Controller.php on line 10
+[01-Mar-2026 20:29:28 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/KreditController.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/KreditController.php on line 9
+[01-Mar-2026 23:07:44 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/LapDebetController.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/LapDebetController.php on line 13
+[02-Mar-2026 00:41:55 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/RekSiswaController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/RekSiswaController.php on line 10
+[02-Mar-2026 01:46:41 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/PengaturanController.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/PengaturanController.php on line 9
+[02-Mar-2026 02:34:49 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/AturPasswordController.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/AturPasswordController.php on line 9
+[02-Mar-2026 12:20:31 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/LapKreditController.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/LapKreditController.php on line 13
+[02-Mar-2026 23:31:54 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/KreditController.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/KreditController.php on line 9
+[03-Mar-2026 00:30:10 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/DebetController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/DebetController.php on line 10
+[03-Mar-2026 01:16:44 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/AturPasswordController.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Controllers/AturPasswordController.php on line 9

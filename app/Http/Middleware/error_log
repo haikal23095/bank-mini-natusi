@@ -1,0 +1,32 @@
+[01-Mar-2026 04:34:45 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Cookie\Middleware\EncryptCookies' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/EncryptCookies.php on line 7
+[01-Mar-2026 11:19:51 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Http\Middleware\TrimStrings' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/TrimStrings.php on line 7
+[01-Mar-2026 18:30:49 UTC] PHP Fatal error:  Uncaught Error: Class 'Fideloper\Proxy\TrustProxies' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/TrustProxies.php on line 8
+[01-Mar-2026 20:52:04 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Http\Middleware\TrustHosts' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/TrustHosts.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/TrustHosts.php on line 7
+[02-Mar-2026 02:29:52 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[02-Mar-2026 14:04:56 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Auth\Middleware\Authenticate' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/Authenticate.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/Authenticate.php on line 7
+[02-Mar-2026 14:05:26 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/VerifyCsrfToken.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[02-Mar-2026 15:57:25 UTC] PHP Fatal error:  Uncaught Error: Class 'Fideloper\Proxy\TrustProxies' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/TrustProxies.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Http/Middleware/TrustProxies.php on line 8

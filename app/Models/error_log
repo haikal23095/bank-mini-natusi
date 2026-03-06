@@ -1,0 +1,40 @@
+[01-Mar-2026 02:16:54 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Kecamatan.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Kecamatan.php on line 8
+[01-Mar-2026 05:18:52 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/PengaturanTabungan.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/PengaturanTabungan.php on line 8
+[01-Mar-2026 07:38:19 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Debet.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Debet.php on line 8
+[01-Mar-2026 08:09:41 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Kabupaten.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Kabupaten.php on line 8
+[01-Mar-2026 08:55:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Pengurus.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Pengurus.php on line 8
+[01-Mar-2026 14:50:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Kabupaten.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Kabupaten.php on line 8
+[01-Mar-2026 17:31:20 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Transaksi.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Transaksi.php on line 8
+[01-Mar-2026 17:45:18 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Pengurus.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Pengurus.php on line 8
+[01-Mar-2026 20:51:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Auth\User' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/User.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/User.php on line 10
+[03-Mar-2026 04:17:21 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Kecamatan.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/smkrade1/lbm.smkradenrahmatmojosari.sch.id/app/Models/Kecamatan.php on line 8
