@@ -13,60 +13,50 @@ use DataTables, Validator, DB, Auth, Excel;
 class SiswaController extends Controller
 {
     function __construct()
-	{
-		$this->title = 'Data Nasabah (Siswa)';
-	}
+    {
+        $this->title = 'Data Nasabah (Siswa)';
+    }
 
     public function main(Request $request)
     {
-        if(request()->ajax()){
+        if (request()->ajax()) {
             // $startDate = $request->startDate;
-			// $endDate = $request->endDate;
+            // $endDate = $request->endDate;
             $filterBy = $request->filterBy;
             $filter = $request->filter;
+            // $data = Siswa::query();
+            $data = Siswa::select('id_siswa', 'no_rekening', 'nama_siswa', 'nama_kelas', 'saldo');
+            if (!empty($filterBy) && !empty($filter)) {
+                $data->where($filterBy, 'LIKE', "%$filter%");
+            }
+            $data->orderBy('id_siswa', 'ASC');
 
-			if (!empty($filterBy) && !empty($filter)) {
-                if ($filterBy == 'nama_siswa') {
-                    $data = Siswa::where('nama_siswa', 'LIKE', "%$filter%")
-                    // ->whereBetween('tanggal_transaksi', [$startDate, $endDate])
-                    ->orderBy('id_siswa','ASC')
-                    ->get();
-                } else {
-                    $data = Siswa::where('nama_kelas', 'LIKE', "%$filter%")
-                    // ->whereBetween('tanggal_transaksi', [$startDate, $endDate])
-                    ->orderBy('id_siswa','ASC')
-                    ->get();
-                }
-			} else {
-				$data = Siswa::orderBy('id_siswa','ASC')->get();
-				// $data = Transaksi::join('siswa as s', 's.id_siswa', 'transaksi.siswa_id')->orderBy('transaksi.created_at','ASC')->get();
-			}
-			
-			return DataTables::of($data)
-				->addIndexColumn()
-				->addColumn('actions', function($row){
-					$txt = "
+
+            return DataTables::of($data)
+                ->addIndexColumn()
+                ->addColumn('actions', function ($row) {
+                    $txt = "
                       <button class='btn btn-sm btn-info' title='Detail' onclick='detail(`$row->id_siswa`)'><i class='fadeIn animated bx bx-show' aria-hidden='true'></i></button>
                       <button class='btn btn-sm btn-primary' title='Edit' onclick='formAdd(`$row->id_siswa`)'><i class='fadeIn animated bx bxs-file' aria-hidden='true'></i></button>
                       <button class='btn btn-sm btn-danger' title='Delete' onclick='hapus(`$row->id_siswa`)'><i class='fadeIn animated bx bxs-trash' aria-hidden='true'></i></button>
 					";
-					return $txt;
-				})
+                    return $txt;
+                })
                 // ->addColumn('registrasi', function($row){
                 //     if (!empty($row->registrasi)) {
                 //         $reg = $row->tanggal_registrasi;
                 //     } else {
                 //         $reg = '';
                 //     }
-                    
+
                 //     return $reg;
                 // })
-                ->addColumn('format', function($row){
-					return $format = "Rp.".number_format($row->saldo,0,',','.');
-				})
-				->rawColumns(['actions'])
-				->toJson();
-		}
+                ->addColumn('format', function ($row) {
+                    return $format = "Rp." . number_format($row->saldo, 0, ',', '.');
+                })
+                ->rawColumns(['actions'])
+                ->toJson();
+        }
 
         $data['title'] = $this->title;
         return view('content.siswa.main', $data);
@@ -74,7 +64,7 @@ class SiswaController extends Controller
 
     public function form(Request $request)
     {
-        $data['title'] = "Tambah ".$this->title;
+        $data['title'] = "Tambah " . $this->title;
         $data['data_provinsi'] = Provinsi::all();
         if (empty($request->id)) {
             $data['siswa'] = '';
@@ -89,31 +79,31 @@ class SiswaController extends Controller
             // }
             // $autoIncNorek = sprintf("%010d",$num+1);
             // $data['noRek'] = $autoIncNorek;
-		}else{
-			$data['siswa'] = Siswa::where('id_siswa',$request->id)->first();
+        } else {
+            $data['siswa'] = Siswa::where('id_siswa', $request->id)->first();
             // $data['groupUsaha'] = GroupUsaha::where('siswa_id',$request->id)->get();
             // $data['pengurus'] = Pengurus::where('siswa_id',$request->id)->get();
             // $data['noRek'] = '';
-		}
+        }
 
         // return $data;
         $content = view('content.siswa.form', $data)->render();
-		return ['status' => 'success', 'content' => $content, 'data' => $data];
+        return ['status' => 'success', 'content' => $content, 'data' => $data];
     }
 
     public function detail(Request $request)
     {
-        $data['title'] = "Detail ".$this->title;
-		$data['data'] = Siswa::where('id_siswa', $request->id)->first();
+        $data['title'] = "Detail " . $this->title;
+        $data['data'] = Siswa::where('id_siswa', $request->id)->first();
         $data['transaksi'] = Transaksi::where('siswa_id', $request->id)->get();
-		$content = view('content.siswa.detail', $data)->render();
-		$return = [
-			'status'=>'success',
-			'code'=>200,
-			'message'=>'Berhasil',
-			'content'=>$content
-		];
-		return response()->json($return);
+        $content = view('content.siswa.detail', $data)->render();
+        $return = [
+            'status' => 'success',
+            'code' => 200,
+            'message' => 'Berhasil',
+            'content' => $content
+        ];
+        return response()->json($return);
     }
 
     public function store(Request $request)
@@ -130,14 +120,14 @@ class SiswaController extends Controller
         } else {
             $siswa = new Siswa;
         }
-        
+
         $siswa->no_rekening = $request->no_rekening;
         $siswa->nama_siswa = $request->nama_siswa;
         $siswa->jenis_kelamin = $request->jenis_kelamin;
         $siswa->nama_kelas = $request->nama_kelas;
         $siswa->nama_ibu = $request->nama_ibu;
         $siswa->tempat_lahir = $request->tempat_lahir;
-        $siswa->tanggal_lahir = date('Y-m-d',strtotime($request->tgl_lahir));
+        $siswa->tanggal_lahir = date('Y-m-d', strtotime($request->tgl_lahir));
         $siswa->alamat = $request->alamat;
         $siswa->provinsi_id = $request->provinsi_id;
         $siswa->kabupaten_id = $request->kabupaten_id;
@@ -163,7 +153,7 @@ class SiswaController extends Controller
         } else {
             $siswa->saldo = 0; // Default 0
         }
-        
+
         $siswa->tanggal_registrasi = date('Y-m-d'); // Default Today
         // $siswa->jenis_usaha = $request->jenis_usaha_aktivitas;
         // $siswa->akte_pendirian_usaha = $request->akte_pendiri_usaha;
@@ -187,7 +177,7 @@ class SiswaController extends Controller
         if ($siswa) {
             // if ($request->has('id_pengurus')) {
             //     $pengurus = new Pengurus;
-    
+
             //     $i = 0;
             //     foreach ($request->id_pengurus as $key => $val) {
             //         $pengurus->siswa_id         = $siswa->id_siswa;
@@ -198,10 +188,10 @@ class SiswaController extends Controller
             //         $i++;
             //     }
             // }
-    
+
             // if ($request->has('id_group_usaha')) {
             //     $groupUsaha = new GroupUsaha;
-    
+
             //     $x = 0;
             //     foreach ($request->id_group_usaha as $key => $val) {
             //         $groupUsaha->siswa_id           = $siswa->id_siswa;
@@ -218,7 +208,7 @@ class SiswaController extends Controller
         } else {
             $pesan = ['code' => 201, 'type' => 'error', 'status' => 'error', 'message' => 'Data Gagal Di simpan'];
         }
-            
+
         return $pesan;
     }
 
@@ -236,7 +226,7 @@ class SiswaController extends Controller
         } else {
             $data = ['type' => 'success', 'status' => 'success', 'code' => '201'];
         }
-        
+
         return $data;
     }
 }

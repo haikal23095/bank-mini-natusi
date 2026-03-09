@@ -226,21 +226,26 @@
     });
 
 	// START ONKEYUP CARI SISWA DEBET
-	function cari_siswa_debet(){
-		var cari = $('input[name=norek_debet]').val();
-		if(cari==''){
-			$('#tempat_data_debet').html('');
-			return;
-		}
-		$.post("{{route('dashboard-debet-cari')}}",{cari:cari},function(data){
+	let timeoutCari = null;
+	function cari_siswa_debet() {
+    var cari = $('input[name=norek_debet]').val();
+    if (cari == '') {
+        $('#tempat_data_debet').html('');
+        return;
+    }
+
+    clearTimeout(timeoutCari);
+    timeoutCari = setTimeout(() => {
+        $.post("{{route('dashboard-debet-cari')}}", {cari: cari}, function(data) {
             var html = '';
-            if(data.data.length!=0){
-                $.each(data.data,function(k,v){
-                    html+='<a href="javascript:void(0)" onclick="pilih_siswa_debet(\''+v.no_rekening+'\')">'+v.no_rekening+' (Nama = '+v.nama_siswa+')</a><br>';
+            if (data.data.length != 0) {
+                $.each(data.data, function(k, v) {
+                    html += '<a href="javascript:void(0)" onclick="pilih_siswa_debet(\'' + v.no_rekening + '\')">' + v.no_rekening + ' (Nama = ' + v.nama_siswa + ')</a><br>';
                 });
             }
             $('#tempat_data_debet').html(html);
-		});
+        });
+    }, 500);
 		
 	}
 
@@ -255,22 +260,25 @@
 	// END ONKEYUP CARI SISWA DEBET
 	
 	// START ONKEYUP CARI SISWA KREDIT
-	function cari_siswa_kredit(param){
-		var cari = $('input[name=norek_kredit]').val();
-		if(cari==''){
-			$('#tempat_data_kredit').html('');
-			return;
-		}
-		$.post("{{route('dashboard-kredit-cari')}}",{cari:cari, param:param},function(data){
+	function cari_siswa_kredit() {
+    var cari = $('input[name=norek_kredit]').val();
+    if (cari == '') {
+        $('#tempat_data_kredit').html('');
+        return;
+    }
+
+    clearTimeout(timeoutCari);
+    timeoutCari = setTimeout(() => {
+        $.post("{{route('dashboard-kredit-cari')}}", {cari: cari}, function(data) {
             var html = '';
-            if(data.data.length!=0){
-                $.each(data.data,function(k,v){
-                    html+='<a href="javascript:void(0)" onclick="pilih_siswa_kredit(\''+v.no_rekening+'\')">'+v.no_rekening+' (Nama = '+v.nama_siswa+')</a><br>';
+            if (data.data.length != 0) {
+                $.each(data.data, function(k, v) {
+                    html += '<a href="javascript:void(0)" onclick="pilih_siswa_kredit(\'' + v.no_rekening + '\')">' + v.no_rekening + ' (Nama = ' + v.nama_siswa + ')</a><br>';
                 });
             }
             $('#tempat_data_kredit').html(html);
-		});
-		
+        });
+    }, 500);
 	}
 
 	function pilih_siswa_kredit(param) {

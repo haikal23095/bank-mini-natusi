@@ -12,76 +12,65 @@ use DataTables, Validator, DB, Auth;
 
 class LapKreditController extends Controller
 {
-    function __construct()
+	function __construct()
 	{
 		$this->title = 'Laporan Kredit';
 	}
 
-    public function main(Request $request)
-    {
-        if(request()->ajax()){
-            $startDate = $request->startDate;
+	public function main(Request $request)
+	{
+		if (request()->ajax()) {
+			$startDate = $request->startDate;
 			$endDate = $request->endDate;
-            $filter = $request->filter;
+			$filter = $request->filter;
 			$filterBy = $request->filterBy;
 
-			if (!empty($filterBy) &&!empty($filter) && !empty($startDate) && !empty($endDate)) {
-				if ($filterBy == 'nama_siswa') {
-					$data = Transaksi::join('siswa as s', 's.id_siswa', 'transaksi.siswa_id')
-						->where('jumlah_kredit', '!=', null)
-						->where('nama_siswa', 'LIKE', "%$filter%")
-						->whereBetween('tanggal_transaksi', [$startDate, $endDate])
-						->orderBy('transaksi.created_at','DESC')
-						->get();
-				} else {
-					$data = Transaksi::join('siswa as s', 's.id_siswa', 'transaksi.siswa_id')
-						->where('jumlah_kredit', '!=', null)
-						->where('nama_kelas', 'LIKE', "%$filter%")
-						->whereBetween('tanggal_transaksi', [$startDate, $endDate])
-						->orderBy('transaksi.created_at','DESC')
-						->get();
-				}
-				
-			} else {
-				$data = Transaksi::join('siswa as s', 's.id_siswa', 'transaksi.siswa_id')
-                ->where('jumlah_kredit', '!=', null)
-                ->orderBy('transaksi.created_at','DESC')
-                ->get();
-				// $data = Transaksi::join('siswa as s', 's.id_siswa', 'transaksi.siswa_id')->orderBy('transaksi.created_at','ASC')->get();
+			$data = Transaksi::join('siswa as s', 's.id_siswa', 'transaksi.siswa_id')
+				->select('transaksi.*', 's.nama_siswa', 's.nama_kelas', 's.no_rekening')
+				->whereNotNull('transaksi.jumlah_kredit');
+
+			if (!empty($filterBy) && !empty($filter)) {
+				$column = $filterBy == 'nama_siswa' || $filterBy == 'nama_kelas' ? 's.' . $filterBy : 'transaksi.' . $filterBy;
+				$data->where($column, 'LIKE', "%$filter%");
 			}
-			
-            $tKredit = Transaksi::where('jumlah_kredit', '!=', null)->sum('jumlah_kredit');
+
+			if (!empty($startDate) && !empty($endDate)) {
+				$data->whereBetween('transaksi.tanggal_transaksi', [$startDate, $endDate]);
+			}
+
+			$tKredit = Transaksi::whereNotNull('jumlah_kredit')->sum('jumlah_kredit');
+			$data->orderBy('transaksi.created_at', 'DESC');
 
 			return DataTables::of($data)
 				->addIndexColumn()
-				->addColumn('actions', function($row){
-				// 	$txt = "
-    //                   <button class='btn btn-sm btn-primary' title='Edit' onclick='editData(`$row->id_transaksi`)'><i class='bx bxs-file'></i></button>
-				// 	  <button class='btn btn-sm btn-danger' title='Delete' onclick='deleteData(`$row->id_transaksi`)'><i class='bx bxs-trash'></i></button>
-				// 	";
-				    $txt = "<button class='btn btn-sm btn-danger' title='Edit'>Tidak Dapat Mengedit / Menghapus Transaksi</i></button>";
+				->addColumn('actions', function ($row) {
+					// 	$txt = "
+					//                   <button class='btn btn-sm btn-primary' title='Edit' onclick='editData(`$row->id_transaksi`)'><i class='bx bxs-file'></i></button>
+					// 	  <button class='btn btn-sm btn-danger' title='Delete' onclick='deleteData(`$row->id_transaksi`)'><i class='bx bxs-trash'></i></button>
+					// 	";
+					$txt = "<button class='btn btn-sm btn-danger' title='Edit'>Tidak Dapat Mengedit / Menghapus Transaksi</i></button>";
 					return $txt;
 				})
-                ->addColumn('format', function($row){
-					return $format = "Rp.".number_format($row->jumlah_kredit,0,',','.');
+				->addColumn('format', function ($row) {
+					return $format = "Rp." . number_format($row->jumlah_kredit, 0, ',', '.');
 				})
-                ->with('tKredit', $tKredit)
+				->with('tKredit', $tKredit)
 				->rawColumns(['actions'])
 				->toJson();
 		}
 
-        $data['title'] = $this->title;
-        return view('content.laporan.main-kredit', $data);
-    }
+		$data['title'] = $this->title;
+		return view('content.laporan.main-kredit', $data);
+	}
 
 	public function edit(Request $request)
 	{
 		// return $request->all();
-		$data['title'] = "Edit ".$this->title;
-        $data['data'] = Transaksi::join('siswa as s', 's.id_siswa', 'transaksi.siswa_id')->where('id_transaksi', $request->id)->first();
+		$data['title'] = "Edit " . $this->title;
+		$data['data'] = Transaksi::join('siswa as s', 's.id_siswa', 'transaksi.siswa_id')->where('id_transaksi', $request->id)->first();
 
-        // return $data;
-        $content = view('content.laporan.form-kredit', $data)->render();
+		// return $data;
+		$content = view('content.laporan.form-kredit', $data)->render();
 		return ['status' => 'success', 'content' => $content, 'data' => $data];
 	}
 
@@ -98,10 +87,10 @@ class LapKreditController extends Controller
 
 		if ($delTransaksi) {
 			$data = ['type' => 'success', 'status' => 'success', 'code' => '200'];
-        } else {
-            $data = ['type' => 'success', 'status' => 'success', 'code' => '201'];
-        }
-	
+		} else {
+			$data = ['type' => 'success', 'status' => 'success', 'code' => '201'];
+		}
+
 		return $data;
 	}
 
@@ -127,16 +116,16 @@ class LapKreditController extends Controller
 
 	public function query($filterBy, $filter, $startDate, $endDate)
 	{
-		if(!empty($startDate) && !empty($endDate) && $filterBy == 'nama_siswa' && !empty($filter)) {
+		if (!empty($startDate) && !empty($endDate) && $filterBy == 'nama_siswa' && !empty($filter)) {
 			$data = transaksi::join('siswa as s', 's.id_siswa', 'transaksi.siswa_id')
-			->where('jumlah_kredit', '!=', null)->where('nama_siswa','LIKE', "%$filter%")
-			->whereBetween('tanggal_transaksi', [$startDate, $endDate])->get();
+				->where('jumlah_kredit', '!=', null)->where('nama_siswa', 'LIKE', "%$filter%")
+				->whereBetween('tanggal_transaksi', [$startDate, $endDate])->get();
 
 			// Pencarian berdasarkan nama kelas dan between two date
-		} else if(!empty($startDate) && !empty($endDate) && $filterBy == 'nama_kelas' && !empty($filter)){
+		} else if (!empty($startDate) && !empty($endDate) && $filterBy == 'nama_kelas' && !empty($filter)) {
 			$data = transaksi::join('siswa as s', 's.id_siswa', 'transaksi.siswa_id')
-			->where('jumlah_kredit', '!=', null)->where('nama_kelas','LIKE', "%$filter%")
-			->whereBetween('tanggal_transaksi', [$startDate, $endDate])->get();
+				->where('jumlah_kredit', '!=', null)->where('nama_kelas', 'LIKE', "%$filter%")
+				->whereBetween('tanggal_transaksi', [$startDate, $endDate])->get();
 		}
 		$this->data = $data;
 	}
