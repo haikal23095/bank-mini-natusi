@@ -94,7 +94,9 @@ class SiswaController extends Controller
     public function detail(Request $request)
     {
         $data['title'] = "Detail " . $this->title;
-        $data['data'] = Siswa::where('id_siswa', $request->id)->first();
+        $data['data'] = Siswa::with(['mst_provinsi', 'mst_kabupaten', 'mst_kecamatan', 'mst_desa'])
+            ->where('id_siswa', $request->id)
+            ->first();
         $data['transaksi'] = Transaksi::where('siswa_id', $request->id)->get();
         $content = view('content.siswa.detail', $data)->render();
         $return = [
